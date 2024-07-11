@@ -66,3 +66,30 @@ int main()
 
     return 0;
 }
+
+// switch statement to evalute 1st character of color
+
+#include <stdio.h>
+
+int main()
+{
+    char color;
+    printf("Enter the first chracter of your color: ");
+    scanf("%c", &color);
+
+    switch (color)
+    {
+    case 'b':
+    case 'B':
+        printf("Blue\n");
+        break;
+    case 'o':
+    case 'O':
+        printf("Orange\n");
+        break;
+    default:
+        printf("Invalid\n");
+    }
+
+    return 0;
+}
