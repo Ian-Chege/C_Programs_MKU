@@ -93,3 +93,63 @@ int main()
 
     return 0;
 }
+
+// while loop example
+#include <stdio.h>
+int main()
+{
+    int i;
+    printf("Enter the value of i\n");
+    scanf("%d", &i);
+    while (i <= 100)
+    {
+        printf("%d\n", i);
+        i++;
+    }
+    return 0;
+}
+
+// program to display even numbers between 50 to 80 using while loop
+#include <stdio.h>
+int main()
+{
+    int i = 50;
+    while (i <= 80)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d\n", i);
+        }
+        i++;
+    }
+    return 0;
+}
+
+// program to display numbers between 0 to 100 that are divisible by 3 using while loop
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    while (i <= 100)
+    {
+        if (i % 3 == 0)
+        {
+            printf("%d\n", i);
+        }
+        i++;
+    }
+    return 0;
+}
+
+// program to display numbers between 0 to 10 using do...while loop
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        printf("%d\n", i);
+        i++;
+    } while (i <= 10);
+    return 0;
+}
