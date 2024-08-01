@@ -153,3 +153,87 @@ int main()
     } while (i <= 10);
     return 0;
 }
+
+// arrays
+#include <stdio.h>
+
+int main()
+{
+    int values[5] = {3, 5, 7, 9, 11};
+    printf("%d", values[3]);
+    return 0;
+}
+
+// arrays using loops
+#include <stdio.h>
+
+int main()
+{
+    int value[5], i;
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%d", &value[i]);
+    }
+    return 0;
+}
+
+// sum of values of a 1-D array
+#include <stdio.h>
+
+int main()
+{
+    int value[7];
+    int sum = 0, i;
+    printf("Enter the 7 values:\n");
+    for (i = 0; i < 7; i++)
+    {
+        scanf("%d", &value[i]);
+        sum = sum + value[i];
+    }
+    printf("The sum is %d", sum);
+
+    return 0;
+}
+
+// program that takes a string, reverses it, and returns the reversed string
+#include <stdio.h>
+#include <string.h>
+
+// Function to reverse a string
+void reverseString(char *str)
+{
+    int n = strlen(str);
+    for (int i = 0; i < n / 2; i++)
+    {
+        char temp = str[i];
+        str[i] = str[n - i - 1];
+        str[n - i - 1] = temp;
+    }
+}
+
+// Function to return a reversed string
+char *getReversedString(char *str)
+{
+    // Create a static variable to hold the reversed string
+    static char reversed[100];
+    // Copy the input string to the static variable
+    strcpy(reversed, str);
+    // Reverse the copied string
+    reverseString(reversed);
+    // Return the reversed string
+    return reversed;
+}
+
+int main()
+{
+    char input[100];
+    printf("Enter a string: ");
+    fgets(input, 100, stdin);
+    // Remove the newline character from the input string
+    input[strcspn(input, "\n")] = 0;
+
+    char *reversed = getReversedString(input);
+    printf("Reversed string: %s\n", reversed);
+
+    return 0;
+}
